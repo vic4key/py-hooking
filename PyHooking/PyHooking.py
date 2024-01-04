@@ -36,12 +36,12 @@ __ARCH_TEMPLATE_LIST = {
     "aarch64_64": ((CS_ARCH_ARM64, CS_MODE_ARM), (20, [0x70, 0x00, 0x00, 0x10, 0x10, 0x02, 0x40, 0xF9, 0x00, 0x02, 0x1F, 0xD6], None)),
 }
 
-arch_template = __ARCH_TEMPLATE_LIST.get(f"{arch}_{bits}", None)
+arch_template = __ARCH_TEMPLATE_LIST.get(f"{os_arch}_{os_bits}", None)
 assert not arch_template is None, "unsupported architecture"
 # print(arch_template)
 
 def default_generate_opcodes(inst, fr, to):
-    return bytes(inst) + pack("Q" if bits == 64 else "L", to)
+    return bytes(inst) + pack("Q" if os_bits == 64 else "L", to)
 
 class PyHooking:
     '''

@@ -1,13 +1,14 @@
 import ctypes
-from PyHooking import PyHooking, load_external_shared_library, arch, bits
+# from PyHooking import PyHooking, load_external_shared_library, os_arch, os_bits
+from PyHooking import *
 
-print(f"PyHooking with `{arch}-{bits}`")
+print(f"PyHooking with `{os_arch}-{os_bits}`")
 
 
 
 # Example with `mylib.print_message`
 
-mylib = load_external_shared_library(f"Examples/mylib_{arch}_{bits}")
+mylib = load_external_shared_library(f"Examples/mylib_{os_arch}_{os_bits}")
 
 @PyHooking.CPrototype(ctypes.CFUNCTYPE(None, ctypes.c_char_p))
 def hk_print_message(message):

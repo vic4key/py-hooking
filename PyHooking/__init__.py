@@ -12,6 +12,11 @@ __author__  = 'Vic P. <vic4key@gmail.com>'
 __all__ =\
 [
     "PyHooking",
+    "os_bits",
+    "os_arch",
+    "os_type",
+    "print_hexlify",
+    "load_external_shared_library",
 ]
 
 from .PyHooking import *

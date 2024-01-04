@@ -25,7 +25,7 @@ Example with `mylib.print_message`
 
 ```py
 import ctypes
-from PyHooking import PyHooking, load_external_shared_library, arch, bits
+from PyHooking import *
 
 # define the hook function
 
@@ -64,7 +64,7 @@ Example with `user32.MessageBoxA`
 
 ```py
 import ctypes
-from PyHooking import PyHooking
+from PyHooking import *
 
 # define the hook function
 
