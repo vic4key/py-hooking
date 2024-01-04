@@ -3,15 +3,23 @@
 Sometimes, you need to manipulate low-level functionality (C APIs, etc) from high-level languages (Python).
 Eg. Force the low-level side calls directly to your own Python override functions. This repo will help you do that. 
 
-- [x] Windows
-- [x] Linux
-- [x] MacOS
-- [x] iOS
-- [x] Android
+*It's python version of my [Cpp Hooking](https://github.com/vic4key/cpp-hooking.git)👌*
+
+#### Available across all the platforms
+
+>✅ Windows
+>
+>✅ Linux
+>
+>✅ MacOS
+>
+>✅ iOS
+>
+>✅ Android
 
 ## Installation
 
-`pip install git+https://github.com/vic4key/py-hooking.git`
+`pip3 install git+https://github.com/vic4key/py-hooking.git`
 
 ## Documentation
 

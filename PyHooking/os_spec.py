@@ -2,11 +2,11 @@ import os, sys
 from struct import calcsize
 from platform import system, machine
 
-os_bits = calcsize("P") * 8 # 32/64
+os_bits = calcsize("P") * 8
 
 os_arch = machine().lower()
-if os_arch == "amd64": os_arch = "x86_64"               # treat amd64 as x86_64
-if os_arch.find("iphone") != -1: os_arch = "aarch64"    # default iOS is aarch64
+if os_arch == "amd64": os_arch = "x86_64"
+if os_arch.find("iphone") != -1: os_arch = "aarch64"
 
 os_type = system().lower()
 if os_type == "linux":  os_type = "android" if os_arch == "aarch64" else os_type

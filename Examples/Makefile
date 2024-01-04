@@ -18,7 +18,7 @@ endif
 
 # OS Type
 
-TYPE := $(shell python -c "import platform;print(platform.system().lower())")   # [windows, linux, android, macos, ios]
+TYPE := $(shell python -c "import platform;print(platform.system().lower())")   # [windows, linux, macos, ios, android]
 TYPE := $(strip $(TYPE))
 
 ifeq ($(TYPE),linux)
