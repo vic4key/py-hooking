@@ -15,6 +15,9 @@ __all__ =\
     "os_bits",
     "os_arch",
     "os_type",
+    "os_name",
+    "is_winnt",
+    "is_posix",
     "print_hexlify",
     "load_external_shared_library",
 ]

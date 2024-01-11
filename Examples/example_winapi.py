@@ -1,7 +1,7 @@
 import ctypes
 from PyHooking import *
 
-print(f"PyHooking with `{os_type}-{os_arch}-{os_bits}`")
+print(f"PyHooking with `{os_type}-{os_bits}:{os_name}-{os_arch}`")
 
 # Example with `user32.MessageBoxA`
 

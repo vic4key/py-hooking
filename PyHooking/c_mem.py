@@ -4,9 +4,9 @@ from dataclasses import dataclass
 
 from .os_spec import *
 
-LIBC = "c" if POSIX else "msvcrt"
+LIBC = "c" if is_posix() else "msvcrt"
 
-if POSIX: # posix memory protection
+if is_posix(): # posix memory protection
     PROT_NONE  = 0
     PROT_READ  = 1
     PROT_WRITE = 2
