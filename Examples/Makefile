@@ -54,7 +54,7 @@ ifeq ($(OS_NAME),darwin)
 endif
 
 # $(info OS Type = '$(OS_TYPE)'; OS Bits = '$(OS_BITS)'; OS Name = '$(OS_NAME)'; OS Arch = '$(OS_ARCH)')
-$(info Compiling with `$(OS_TYPE)-$(OS_BITS):$(OS_NAME)-$(OS_ARCH)`)
+$(info Compiling with `$(OS_ARCH)/$(OS_BITS):$(OS_TYPE)/$(OS_NAME)`)
 
 NAME   := mylib
 SOURCE := $(NAME).cpp
