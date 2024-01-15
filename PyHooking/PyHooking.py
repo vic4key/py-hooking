@@ -23,6 +23,7 @@ if "CS_ARCH_ALL" not in globals().keys():
 __ARCH_TEMPLATE_LIST = {
     # FF 25 ?? ?? ?? ??         jmp dword ptr ds:[<pointer of address>]
     # ?? ?? ?? ??               <address>
+    "i686_32":   ((CS_ARCH_X86, CS_MODE_32), (10, [0xFF, 0x25], lambda inst, fr, to: bytes(inst) + pack("L", fr + 6) + pack("L" , to))),
     "x86_64_32": ((CS_ARCH_X86, CS_MODE_32), (10, [0xFF, 0x25], lambda inst, fr, to: bytes(inst) + pack("L", fr + 6) + pack("L" , to))),
     # FF 25 00 00 00 00         jmp qword ptr [rip]
     # ?? ?? ?? ?? ?? ?? ?? ??   <address>

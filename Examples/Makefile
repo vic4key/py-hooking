@@ -5,7 +5,7 @@ OS_BITS := $(strip $(OS_BITS))
 
 # OS Arch
 
-OS_ARCH := $(shell python3 -c "import platform;print(platform.machine().lower())")  # [x86_64, aarch64]
+OS_ARCH := $(shell python3 -c "import platform;print(platform.machine().lower())")  # [i686, x86_64, aarch64]
 OS_ARCH := $(strip $(OS_ARCH))
 
 ifeq ($(OS_ARCH),amd64)

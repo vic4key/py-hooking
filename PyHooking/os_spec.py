@@ -8,7 +8,7 @@ os_bits = [32, 64]
 os_bits = calcsize("P") * 8
 
 '''
-os_arch = [x86_64, aarch64]
+os_arch = [i686, x86_64, aarch64]
 '''
 os_arch = machine().lower()
 if os_arch == "amd64": os_arch = "x86_64"
