@@ -1,11 +1,11 @@
 # OS Mode
 
-BITS := $(shell python -c "import struct;print(struct.calcsize('P') * 8)")      # [32, 64]
+BITS := $(shell python3 -c "import struct;print(struct.calcsize('P') * 8)")      # [32, 64]
 BITS := $(strip $(BITS))
 
 # OS Arch
 
-ARCH := $(shell python -c "import platform;print(platform.machine().lower())")  # [x86_64, aarch64]
+ARCH := $(shell python3 -c "import platform;print(platform.machine().lower())")  # [x86_64, aarch64]
 ARCH := $(strip $(ARCH))
 
 ifeq ($(ARCH),amd64)
@@ -18,7 +18,7 @@ endif
 
 # OS Type
 
-TYPE := $(shell python -c "import platform;print(platform.system().lower())")   # [windows, linux, macos, ios, android]
+TYPE := $(shell python3 -c "import platform;print(platform.system().lower())")   # [windows, linux, macos, ios, android]
 TYPE := $(strip $(TYPE))
 
 ifeq ($(TYPE),linux)
