@@ -21,20 +21,6 @@ endif
 OS_TYPE := $(shell python3 -c "import platform;print(platform.system().lower())")   # [windows, linux, macos, ios, android]
 OS_TYPE := $(strip $(OS_TYPE))
 
-ifeq ($(OS_TYPE),linux)
-  ifeq ($(OS_ARCH),aarch64) 
-    OS_TYPE := android
-  endif
-endif
-
-ifeq ($(OS_TYPE),darwin)
-  ifeq ($(OS_ARCH),x86_64) 
-    OS_TYPE := macos
-  else
-    OS_TYPE := ios
-  endif
-endif
-
 # OS Name
 
 OS_NAME = $(OS_TYPE)
