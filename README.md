@@ -3,6 +3,8 @@
 Sometimes, you need to manipulate low-level functionality (C APIs, etc) from high-level languages (Python).
 Eg. Force the low-level side calls directly to your own Python override functions. This repo will help you do that. 
 
+![py-hooking-cover](https://github.com/vic4key/py-hooking/assets/5672864/4f5642bf-f80b-4c03-a7d9-8f22930765ce)
+
 *It's python version of my [Cpp Hooking](https://github.com/vic4key/cpp-hooking.git)👌*
 
 #### Available across all the platforms
@@ -99,7 +101,7 @@ user32.MessageBoxA(0, b"text 2", b"", 0)
 
 '''
 Invoked `hk_MessageBoxA(None, 'text 1', '', 0)`
-<empty>
+'text 2'
 '''
 ```
 
