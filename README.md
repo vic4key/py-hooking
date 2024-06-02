@@ -13,6 +13,8 @@ Eg. Force the low-level side calls directly to your own Python override function
 >
 >✅ Linux
 >
+>✅ Unix
+>
 >✅ MacOS
 >
 >✅ iOS
